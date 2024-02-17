@@ -2,7 +2,7 @@
 
 ![license](https://img.shields.io/github/license/t1m013y/PIDctrl-c)
 
-PID (Proportional–integral–derivative) controller for C and C++ languages
+PID (Proportional-integral-derivative) controller for C and C++ languages
 
 ## About
 A proportional–integral–derivative controller (PID controller or three-term controller) is a control loop mechanism employing feedback that is widely used in industrial control systems and a variety of other applications requiring continuously modulated control. A PID controller continuously calculates an error value e ( t ) {\displaystyle e(t)} as the difference between a desired setpoint (SP) and a measured process variable (PV) and applies a correction based on proportional, integral, and derivative terms (denoted P, I, and D respectively), hence the name. [\(Wikipedia\)](https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller)
