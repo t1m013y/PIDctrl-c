@@ -1,6 +1,6 @@
 /*
   PIDctrl-c
-  v1.0
+  v1.1
   https://github.com/t1m013y/PIDctrl-c
   By Timofey Fomin (https://github.com/t1m013y, t1m013y@gmail.com)
 */

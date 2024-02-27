@@ -1,6 +1,6 @@
 /*
   PIDctrl-c
-  v1.0
+  v1.1
   https://github.com/t1m013y/PIDctrl-c
   By Timofey Fomin (https://github.com/t1m013y, t1m013y@gmail.com)
 */
@@ -61,7 +61,7 @@ double PIDctrl_Calculate(PIDctrl_t* controller, double setpoint, double measurem
   
   double err = setpoint - measurement;
   
-  controller->integrator += err * controller->config.timestep;
+  controller->integrator += err * controller->config.timestep * controller->config.kI;
   if (controller->integrator > controller->config.maxOut)
     controller->integrator = controller->config.maxOut;
   if (controller->integrator < controller->config.minOut)
@@ -69,7 +69,7 @@ double PIDctrl_Calculate(PIDctrl_t* controller, double setpoint, double measurem
   
   double P = err * controller->config.kP;
   double D = (err - controller->prevErr) * controller->config.kD / controller->config.timestep;
-  double I = controller->integrator * controller->config.kI;
+  double I = controller->integrator;
   
   double out = P + D + I;
   
