@@ -17,10 +17,10 @@ A block diagram of a PID controller:
 ## Usage
 First, create and initialize the controller.
 ```c
-PIDctrl_t PID;  // create PID controller
+PIDctrl_t PID = {0};  // create PID controller and initialize it with zero
 struct PIDctrl_config PIDconfig = {kP: 0.05, kD: 0.3, kI: 0.0001, timestep: 1, minOut: -65535, maxOut: 65535};  // Configuration structure
 
-while (!PIDctrl_Init(&PID, PIDconfig)) {}  // This code will try to initialize the controller until success
+while (!PIDctrl_Init(&PID, PIDconfig)) {}  // This line will try to initialize the controller until success
 ```
 
 Use `PIDctrl_Calculate()` to calculate controller value.
